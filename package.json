@@ -1,0 +1,34 @@
+{
+  "name": "react-native-image-crop-picker-demo“,
+  "version": "0.14.0",
+  "description": "Select single or multiple images, with cropping option",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "rm -rf android/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbl217/react-native-image-crop-picker-demo.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react-native",
+    "image",
+    "picker",
+    "crop",
+    "cropping",
+    "multiple",
+    "camera"
+  ],
+  
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cbl217/react-native-image-crop-picker-demo/issues"
+  },
+  "homepage": "https://github.com/cbl217/react-native-image-crop-picker-demo#readme",
+  "peerDependencies": {
+    "react-native": ">=0.40.0"
+  }
+}
