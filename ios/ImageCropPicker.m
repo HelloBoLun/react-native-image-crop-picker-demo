@@ -677,10 +677,15 @@ RCT_EXPORT_METHOD(openCropper:(NSDictionary *)options
 // we are saving image and saving it to the tmp location where we are allowed to access image later
 - (NSString*) persistFile:(NSData*)data {
     // create temp file
+    NSString *str=[self typeForImageData:data];
     NSString *tmpDirFullPath = [self getTmpDirectory];
     NSString *filePath = [tmpDirFullPath stringByAppendingString:[[NSUUID UUID] UUIDString]];
-    filePath = [filePath stringByAppendingString:@".jpg"];
-
+    if ([str isEqualToString:@"image/jpeg"]) {
+        filePath = [filePath stringByAppendingString:@".jpg"];
+    } else {
+        filePath = [filePath stringByAppendingString:@".png"];
+    }
+    
     // save cropped file
     BOOL status = [data writeToFile:filePath atomically:YES];
     if (!status) {
